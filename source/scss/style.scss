@@ -1,22 +1,60 @@
-$bg-color: #fff;
-$brand-color: #f92672;
-$text-color: #272822;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400&display=swap");
 
-$bg-color-dark: #222629;
-$brand-color-dark: #87c232;
+$family-text: "Roboto", sans-serif;
+$back-color: #e5e5e5;
+$brand: #e6db74;
+$color-text: #272822;
+$mark-color: #f92672;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
 
 body {
+	background-color: $back-color;
 	margin: 0;
-	background-color: $bg-color;
-	color: $text-color;
 }
-.brand {
-	color: $brand-color;
-}
-
-.dark-theme {
-	background: $bg-color-dark;
-	.brand {
-		color: $bg-color-dark;
+.header {
+	.header__top {
+		display: flex;
+		justify-content: space-between;
+		margin: 44px 80px 0;
+		font-size: 18px;
+		line-height: 21px;
+		color: $color-text;
+		font-family: $family-text;
+		a {
+			text-decoration: none;
+			color: $color-text;
+		}
+		p {
+			margin: 0;
+			span {
+				color: $mark-color;
+			}
+		}
+	}
+	.main-block {
+		max-width: 1280px;
+		margin: 80px auto;
+		transform: rotate(-270deg);
+		.yellow-block {
+			background-color: $brand;
+			width: 740px;
+			height: 640px;
+		}
+		.white-block {
+			background-color: #f5f5f5;
+			width: 740px;
+			height: 640px;
+		}
+	}
+	.title {
+		font-family: $family-text;
+		font-size: 80px;
+		line-height: 94px;
+		color: $color-text;
 	}
 }
