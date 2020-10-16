@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
-$family-text: "Roboto", sans-serif;
+$family: "Montserrat", sans-serif;
 $back-color: #e5e5e5;
-$brand: #e6db74;
-$color-text: #272822;
-$mark-color: #f92672;
-
+$brand-color: #e6db74;
+$text-color: #272822;
+$switch-color: #f92672;
+$change-color: #75715e;
 *,
 *::before,
 *::after {
@@ -14,47 +14,78 @@ $mark-color: #f92672;
 
 body {
 	background-color: $back-color;
-	margin: 0;
+}
+.wrapper {
+	padding: 80px;
 }
 .header {
-	.header__top {
-		display: flex;
-		justify-content: space-between;
-		margin: 44px 80px 0;
+	a {
+		text-decoration: none;
+		font-family: $family;
 		font-size: 18px;
 		line-height: 21px;
-		color: $color-text;
-		font-family: $family-text;
-		a {
-			text-decoration: none;
-			color: $color-text;
+		color: $text-color;
+		position: fixed;
+		top: 44px;
+	}
+	button {
+		font-family: $family;
+		font-size: 18px;
+		line-height: 21px;
+		position: fixed;
+		right: 80px;
+		top: 44px;
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
+		span {
+			color: $switch-color;
 		}
-		p {
-			margin: 0;
-			span {
-				color: $mark-color;
+	}
+	.menu-burger {
+		width: 56px;
+		height: 30px;
+		position: fixed;
+		top: 50%;
+		cursor: pointer;
+		.menu-burger-line {
+			display: block;
+			width: 48px;
+			height: 5px;
+			background-color: $change-color;
+			position: relative;
+			left: -20px;
+			&::before,
+			&::after {
+				content: "";
+				display: block;
+				width: 48px;
+				height: 5px;
+				background: $change-color;
+				position: absolute;
+				left: 0;
+			}
+			&:before {
+				left: 10px;
+				top: 12px;
+			}
+			&::after {
+				top: 24px;
 			}
 		}
 	}
-	.main-block {
-		max-width: 1280px;
-		margin: 80px auto;
-		transform: rotate(-270deg);
-		.yellow-block {
-			background-color: $brand;
-			width: 740px;
-			height: 640px;
-		}
-		.white-block {
-			background-color: #f5f5f5;
-			width: 740px;
-			height: 640px;
-		}
+}
+.page-block {
+	display: flex;
+	height: 100vh;
+	.main-page-block {
+		height: 100%;
+		width: 50%;
+		background-color: $brand-color;
 	}
-	.title {
-		font-family: $family-text;
-		font-size: 80px;
-		line-height: 94px;
-		color: $color-text;
+	.right-page-block {
+		height: 100%;
+		width: 50%;
+		background-color: #f5f5f5;
 	}
 }

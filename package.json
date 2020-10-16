@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/kolenov/askmumm.git"
+    "url": "git@github.com:raysofgoodness/portfolio.git"
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/kolenov/askmumm#readme",
+  "homepage": "https://github.com/raysofgoodness",
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^10.0.1",
