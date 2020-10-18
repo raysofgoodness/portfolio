@@ -58,12 +58,15 @@ body {
 	display: flex;
 }
 
-// animation scrolldown 
+// animation scrolldown
 .scrolldown {
 	position: fixed;
-	bottom: 0;
+	left: 930px;
+	bottom: 60px;
 	z-index: 200;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
 	.animated * {
 		-webkit-animation-duration: 0.5s;
 		animation-duration: 0.5s;
@@ -86,9 +89,11 @@ body {
 		}
 	}
 	.txt {
-		display: inline-block;
-		transform-origin: 0 0;
-		transform: rotate(-90deg);
+		font-size: 16px;
+		line-height: 19px;
+		transform: rotate(180deg);
+		writing-mode: vertical-lr;
+		padding-top: 20px;
 	}
 }
 // Burger styles
@@ -107,18 +112,44 @@ body {
 		height: 5px;
 		background-color: $fitches-color;
 		position: relative;
-		transition: cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.45s;
+		// transition: cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.45s;
+		transform-origin: 100% 50%;
 	}
 	.btn-top {
 		top: -8px;
+		width: 50%;
+		transition: all 200ms ease-in-out;
 	}
-
+	.btn-mid {
+		width: 75%;
+	}
 	.btn-bot {
 		bottom: -8px;
+		width: 100%;
+		transition: all 400ms ease-in-out;
 	}
 	&:hover {
+		.btn-top {
+			animation: burger-hover 1s infinite ease-in-out alternate;
+		}
 		.btn-mid {
-			left: 8px;
+			animation: burger-hover 1s infinite ease-in-out alternate forwards 200ms;
+		}
+		.btn-bot {
+			animation: burger-hover 1s infinite ease-in-out alternate forwards 400ms;
+		}
+	}
+	@keyframes burger-hover {
+		0% {
+			width: 100%;
+		}
+
+		50% {
+			width: 50%;
+		}
+
+		100% {
+			width: 100%;
 		}
 	}
 }

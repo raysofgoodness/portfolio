@@ -105,9 +105,12 @@ body {
 
 .scrolldown {
   position: fixed;
-  bottom: 0;
+  left: 930px;
+  bottom: 60px;
   z-index: 200;
-  text-align: center; }
+  text-align: center;
+  display: flex;
+  flex-direction: column; }
   .scrolldown .animated * {
     -webkit-animation-duration: 0.5s;
     animation-duration: 0.5s;
@@ -134,9 +137,12 @@ body {
   50% {
     transform: translateY(-5px); } }
   .scrolldown .txt {
-    display: inline-block;
-    transform-origin: 0 0;
-    transform: rotate(-90deg); }
+    font-size: 16px;
+    line-height: 19px;
+    transform: rotate(180deg);
+    -ms-writing-mode: tb-lr;
+        writing-mode: vertical-lr;
+    padding-top: 20px; }
 
 .btn_burger {
   position: fixed;
@@ -153,13 +159,42 @@ body {
     height: 5px;
     background-color: #75715E;
     position: relative;
-    transition: cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.45s; }
+    transform-origin: 100% 50%; }
   .btn_burger .btn-top {
-    top: -8px; }
+    top: -8px;
+    width: 50%;
+    transition: all 200ms ease-in-out; }
+  .btn_burger .btn-mid {
+    width: 75%; }
   .btn_burger .btn-bot {
-    bottom: -8px; }
+    bottom: -8px;
+    width: 100%;
+    transition: all 400ms ease-in-out; }
+  .btn_burger:hover .btn-top {
+    -webkit-animation: burger-hover 1s infinite ease-in-out alternate;
+            animation: burger-hover 1s infinite ease-in-out alternate; }
   .btn_burger:hover .btn-mid {
-    left: 8px; }
+    -webkit-animation: burger-hover 1s infinite ease-in-out alternate forwards 200ms;
+            animation: burger-hover 1s infinite ease-in-out alternate forwards 200ms; }
+  .btn_burger:hover .btn-bot {
+    -webkit-animation: burger-hover 1s infinite ease-in-out alternate forwards 400ms;
+            animation: burger-hover 1s infinite ease-in-out alternate forwards 400ms; }
+
+@-webkit-keyframes burger-hover {
+  0% {
+    width: 100%; }
+  50% {
+    width: 50%; }
+  100% {
+    width: 100%; } }
+
+@keyframes burger-hover {
+  0% {
+    width: 100%; }
+  50% {
+    width: 50%; }
+  100% {
+    width: 100%; } }
 
 .links {
   position: fixed;
