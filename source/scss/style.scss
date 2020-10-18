@@ -57,6 +57,40 @@ body {
 	margin: 0 0 $step;
 	display: flex;
 }
+
+// animation scrolldown 
+.scrolldown {
+	position: fixed;
+	bottom: 0;
+	z-index: 200;
+	text-align: center;
+	.animated * {
+		-webkit-animation-duration: 0.5s;
+		animation-duration: 0.5s;
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+		-webkit-animation-timing-function: linear;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-name: arrow;
+		animation-name: arrow;
+	}
+	@keyframes arrow {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-5px);
+		}
+	}
+	.txt {
+		display: inline-block;
+		transform-origin: 0 0;
+		transform: rotate(-90deg);
+	}
+}
 // Burger styles
 .btn_burger {
 	position: fixed;
@@ -96,11 +130,15 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin-right: 28px;
+	margin-right: 20px;
 	li {
 		margin-top: 20px;
 		svg * {
 			fill: $fitches-color;
+		}
+		svg *:hover {
+			transition: 0.5s ease;
+			fill: $brand-color;
 		}
 	}
 }
@@ -128,6 +166,9 @@ body {
 		line-height: 94px;
 		color: $text-color;
 		transform: translateX(-50%);
+		span {
+			color: $brand-color;
+		}
 	}
 }
 .footer {
