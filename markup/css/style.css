@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap");
 *,
 *:before,
 *:after {
@@ -53,13 +54,19 @@ table {
 body {
   margin: 0;
   background: #fff;
-  color: #272822; }
+  color: #272822;
+  font-family: "Montserrat", sans-serif; }
 
-.btn {
-  border: 2px solid #f92672;
-  color: #f92672;
+.switch-btn {
+  border: none;
   background: none;
-  outline: none; }
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 21px;
+  color: #272822; }
+  .switch-btn span {
+    color: #f92672; }
 
 .box {
   background: #f5f5f5; }
@@ -79,24 +86,45 @@ body {
   height: 80px;
   background-color: #fff;
   top: 0;
-  left: 0; }
+  left: 0;
+  padding: 44px 80px;
+  display: flex;
+  justify-content: space-between; }
+  .heading h1 {
+    font-size: 18px;
+    line-height: 21px; }
+    .heading h1 a {
+      text-decoration: none;
+      color: #272822; }
 
 .header {
   background-color: #e6db74;
   height: calc(100vh - 160px);
   margin: 0 0 80px;
   display: flex; }
-  .header:hover .hero {
-    opacity: 0;
-    transition: 1s ease-out 0.4s; }
-  .header:hover .info-text {
-    opacity: 1;
-    transition: 1s ease-out 0.4s; }
 
-.btn-burger {
+.btn_burger {
   position: fixed;
   top: 50%;
-  left: 0; }
+  left: 48px;
+  width: 56px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer; }
+  .btn_burger-line {
+    display: block;
+    width: 48px;
+    height: 5px;
+    background-color: #75715E;
+    position: relative;
+    transition: cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.45s; }
+  .btn_burger .btn-top {
+    top: -8px; }
+  .btn_burger .btn-bot {
+    bottom: -8px; }
+  .btn_burger:hover .btn-mid {
+    left: 8px; }
 
 .links {
   position: fixed;
@@ -105,7 +133,12 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  margin-right: 28px; }
+  .links li {
+    margin-top: 20px; }
+    .links li svg * {
+      fill: #75715E; }
 
 .menu {
   display: none; }
@@ -125,7 +158,9 @@ body {
   .hero-text {
     display: block;
     width: 400px;
+    font-weight: 900;
     font-size: 80px;
+    line-height: 94px;
     color: #272822;
     transform: translateX(-50%); }
 
@@ -137,15 +172,3 @@ body {
   bottom: 0;
   left: 0;
   z-index: 100; }
-
-.dark-theme {
-  background: #222629; }
-  .dark-theme .btn {
-    border: 2px solid #87c232;
-    color: #87c232; }
-  .dark-theme .brand {
-    color: #87c232; }
-  .dark-theme .en {
-    display: none; }
-  .dark-theme .ua {
-    display: block; }

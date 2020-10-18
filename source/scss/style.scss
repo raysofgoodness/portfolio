@@ -1,16 +1,24 @@
 @import "reset.scss";
 @import "variables.scss";
+@import "fonts.scss";
 
 body {
 	margin: 0;
 	background: $bg-color;
 	color: $text-color;
+	font-family: $family;
 }
-.btn {
-	border: 2px solid $brand-color;
-	color: $brand-color;
+.switch-btn {
+	border: none;
 	background: none;
 	outline: none;
+	cursor: pointer;
+	font-size: 18px;
+	line-height: 21px;
+	color: $text-color;
+	span {
+		color: $brand-color;
+	}
 }
 .box {
 	background: $bg-content;
@@ -31,29 +39,54 @@ body {
 	background-color: $bg-color;
 	top: 0;
 	left: 0;
+	padding: 44px 80px;
+	display: flex;
+	justify-content: space-between;
+	h1 {
+		font-size: 18px;
+		line-height: 21px;
+		a {
+			text-decoration: none;
+			color: $text-color;
+		}
+	}
 }
 .header {
 	background-color: $bg-brand;
 	height: calc(100vh - 160px);
 	margin: 0 0 $step;
 	display: flex;
-	&:hover {
-		.hero {
-			opacity: 0;
-			transition: 1s ease-out 0.4s;
-		}
-		.info {
-			&-text {
-				opacity: 1;
-				transition: 1s ease-out 0.4s;
-			}
-		}
-	}
 }
-.btn-burger {
+// Burger styles
+.btn_burger {
 	position: fixed;
 	top: 50%;
-	left: 0;
+	left: 48px;
+	width: 56px;
+	height: 30px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	&-line {
+		display: block;
+		width: 48px;
+		height: 5px;
+		background-color: $fitches-color;
+		position: relative;
+		transition: cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.45s;
+	}
+	.btn-top {
+		top: -8px;
+	}
+
+	.btn-bot {
+		bottom: -8px;
+	}
+	&:hover {
+		.btn-mid {
+			left: 8px;
+		}
+	}
 }
 .links {
 	position: fixed;
@@ -63,6 +96,13 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	margin-right: 28px;
+	li {
+		margin-top: 20px;
+		svg * {
+			fill: $fitches-color;
+		}
+	}
 }
 .menu {
 	display: none;
@@ -83,7 +123,9 @@ body {
 	&-text {
 		display: block;
 		width: 400px;
+		font-weight: 900;
 		font-size: 80px;
+		line-height: 94px;
 		color: $text-color;
 		transform: translateX(-50%);
 	}
@@ -96,20 +138,4 @@ body {
 	bottom: 0;
 	left: 0;
 	z-index: 100;
-}
-.dark-theme {
-	background: $bg-color-dark;
-	.btn {
-		border: 2px solid $brand-color-dark;
-		color: $brand-color-dark;
-	}
-	.brand {
-		color: $brand-color-dark;
-	}
-	.en {
-		display: none;
-	}
-	.ua {
-		display: block;
-	}
 }
