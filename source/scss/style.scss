@@ -1,91 +1,115 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-
-$family: "Montserrat", sans-serif;
-$back-color: #e5e5e5;
-$brand-color: #e6db74;
-$text-color: #272822;
-$switch-color: #f92672;
-$change-color: #75715e;
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
+@import "reset.scss";
+@import "variables.scss";
 
 body {
-	background-color: $back-color;
+	margin: 0;
+	background: $bg-color;
+	color: $text-color;
+}
+.btn {
+	border: 2px solid $brand-color;
+	color: $brand-color;
+	background: none;
+	outline: none;
+}
+.box {
+	background: $bg-content;
+}
+.brand {
+	color: $brand-color;
+}
+.ua {
+	display: none;
 }
 .wrapper {
-	padding: 80px;
+	padding: $step;
+}
+.heading {
+	position: fixed;
+	width: 100%;
+	height: $step;
+	background-color: $bg-color;
+	top: 0;
+	left: 0;
 }
 .header {
-	a {
-		text-decoration: none;
-		font-family: $family;
-		font-size: 18px;
-		line-height: 21px;
-		color: $text-color;
-		position: fixed;
-		top: 44px;
-	}
-	button {
-		font-family: $family;
-		font-size: 18px;
-		line-height: 21px;
-		position: fixed;
-		right: 80px;
-		top: 44px;
-		border: none;
-		background-color: transparent;
-		cursor: pointer;
-		span {
-			color: $switch-color;
+	background-color: $bg-brand;
+	height: calc(100vh - 160px);
+	margin: 0 0 $step;
+	display: flex;
+	&:hover {
+		.hero {
+			opacity: 0;
+			transition: 1s ease-out 0.4s;
 		}
-	}
-	.menu-burger {
-		width: 56px;
-		height: 30px;
-		position: fixed;
-		top: 50%;
-		cursor: pointer;
-		.menu-burger-line {
-			display: block;
-			width: 48px;
-			height: 5px;
-			background-color: $change-color;
-			position: relative;
-			left: -20px;
-			&::before,
-			&::after {
-				content: "";
-				display: block;
-				width: 48px;
-				height: 5px;
-				background: $change-color;
-				position: absolute;
-				left: 0;
-			}
-			&:before {
-				left: 10px;
-				top: 12px;
-			}
-			&::after {
-				top: 24px;
+		.info {
+			&-text {
+				opacity: 1;
+				transition: 1s ease-out 0.4s;
 			}
 		}
 	}
 }
-.page-block {
-	display: flex;
+.btn-burger {
+	position: fixed;
+	top: 50%;
+	left: 0;
+}
+.links {
+	position: fixed;
+	top: 0;
+	right: 0;
 	height: 100vh;
-	.main-page-block {
-		height: 100%;
-		width: 50%;
-		background-color: $brand-color;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.menu {
+	display: none;
+}
+.info {
+	flex-grow: 1;
+	flex-basis: 50%;
+	&-text {
+		opacity: 0;
 	}
-	.right-page-block {
-		height: 100%;
-		width: 50%;
-		background-color: #f5f5f5;
+}
+.hero {
+	background-color: $bg-content;
+	flex-grow: 1;
+	flex-basis: 50%;
+	display: flex;
+	align-items: center;
+	&-text {
+		display: block;
+		width: 400px;
+		font-size: 80px;
+		color: $text-color;
+		transform: translateX(-50%);
+	}
+}
+.footer {
+	position: fixed;
+	width: 100%;
+	height: $step;
+	background-color: $bg-color;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+}
+.dark-theme {
+	background: $bg-color-dark;
+	.btn {
+		border: 2px solid $brand-color-dark;
+		color: $brand-color-dark;
+	}
+	.brand {
+		color: $brand-color-dark;
+	}
+	.en {
+		display: none;
+	}
+	.ua {
+		display: block;
 	}
 }
