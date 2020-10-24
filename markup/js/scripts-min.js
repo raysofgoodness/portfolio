@@ -1,0 +1,1 @@
+var header=document.querySelector(".hero");function animateHeader(){if(header){if(window.pageYOffset>0)return void header.classList.add("_active");header.classList.remove("_active")}}window.addEventListener("scroll",animateHeader);
