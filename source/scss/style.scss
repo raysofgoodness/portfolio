@@ -38,6 +38,11 @@ body {
 .wrapper {
 	padding: $step;
 }
+.cursor {
+	width: 20px;
+	height: 20px;
+	background-color: $bg-brand;
+}
 .heading {
 	position: fixed;
 	width: 100%;
@@ -263,6 +268,32 @@ body {
 	width: 100%;
 	padding: 80px;
 	background-color: $bg-content;
+	margin-bottom: 80px;
+	&:hover {
+		.skill-set-item {
+			.html {
+				animation-name: html;
+			}
+			.resp {
+				animation-name: resp;
+			}
+			.boots {
+				animation-name: boots;
+			}
+			.jquery {
+				animation-name: jquery;
+			}
+			.prepros {
+				animation-name: cssprepros;
+			}
+			.gulp {
+				animation-name: gulp;
+			}
+			.git {
+				animation-name: git;
+			}
+		}
+	}
 }
 .progress-menu {
 	display: flex;
@@ -297,26 +328,90 @@ body {
 		animation-timing-function: ease;
 		animation-fill-mode: forwards;
 	}
-	.html {
+}
+@keyframes html {
+	to {
 		width: 90%;
 	}
-	.resp {
+}
+@keyframes resp {
+	to {
 		width: 80%;
 	}
-	.boots {
+}
+@keyframes boots {
+	to {
 		width: 30%;
 	}
-	.jquery {
+}
+@keyframes jquery {
+	to {
 		width: 50%;
 	}
-	.prepros {
+}
+@keyframes cssprepros {
+	to {
 		width: 80%;
 	}
-	.gulp {
+}
+@keyframes gulp {
+	to {
 		width: 20%;
 	}
-	.git {
+}
+@keyframes git {
+	to {
 		width: 70%;
+	}
+}
+.projects {
+	background: #353535 url("../img/projects-bg.jpg") no-repeat;
+	background-size: contain;
+	background-position: center;
+	min-height: 100vh;
+	padding: 80px;
+	&:hover {
+		background-color: #353535;
+	}
+	h2 {
+		color: $bg-brand;
+		margin-bottom: 80px;
+	}
+	p {
+		color: $bg-color;
+		width: 600px;
+		font-size: 32px;
+		line-height: 37px;
+		margin-bottom: 16px;
+	}
+	.title-lib {
+		font-weight: 900;
+	}
+	a {
+		color: $brand-color;
+		cursor: pointer;
+		font-size: 18px;
+		line-height: 21px;
+		&:hover {
+			text-decoration: underline;
+			transition: 0.7s;
+		}
+		svg {
+			margin-left: 8px;
+			vertical-align: middle;
+		}
+	}
+}
+.inner-text {
+	margin-bottom: 80px;
+}
+.content-project {
+	background-color: #353535;
+	min-height: 100vh;
+	opacity: 0;
+	transition: opacity 0.7s;
+	&:hover {
+		opacity: 1;
 	}
 }
 .footer {
