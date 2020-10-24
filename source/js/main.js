@@ -10,3 +10,16 @@ function animateHeader() {
 	}
 }
 window.addEventListener('scroll', animateHeader)
+
+var scroll = document.querySelector('.scrolldown')
+
+function animateScroll() {
+	if (scroll) {
+		if (window.pageYOffset > 0) {
+			scroll.classList.add('_active-scroll')
+			return
+		}
+		scroll.classList.remove('_active-scroll')
+	}
+}
+window.addEventListener('scroll', animateScroll)

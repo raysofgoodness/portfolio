@@ -7,6 +7,12 @@ body {
 	background: $bg-color;
 	color: $text-color;
 	font-family: $family;
+	h2 {
+		font-weight: 900;
+		font-size: 80px;
+		line-height: 94px;
+		color: $text-color;
+	}
 }
 .switch-btn {
 	border: none;
@@ -116,6 +122,7 @@ body {
 	text-align: center;
 	display: flex;
 	flex-direction: column;
+	transition: 1s ease-in;
 	.animated * {
 		-webkit-animation-duration: 0.5s;
 		animation-duration: 0.5s;
@@ -144,6 +151,15 @@ body {
 		writing-mode: vertical-lr;
 		padding-top: 20px;
 	}
+}
+._active-scroll {
+	position: fixed;
+	left: 100px;
+	bottom: 60px;
+	z-index: 200;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
 }
 // Burger styles
 .btn_burger {
@@ -189,6 +205,12 @@ body {
 		.btn-bot {
 			animation: burger-hover 1s infinite ease-in-out alternate forwards 400ms;
 		}
+		.btn-top,
+		.btn-mid,
+		.btn-bot {
+			background-color: $brand-color;
+			transition: 1s;
+		}
 	}
 	@keyframes burger-hover {
 		0% {
@@ -218,9 +240,13 @@ body {
 		svg * {
 			fill: $fitches-color;
 		}
-		svg *:hover {
-			transition: 0.5s ease;
-			fill: $brand-color;
+		a {
+			&:hover {
+				svg * {
+					fill: $brand-color;
+					transition: 0.3s;
+				}
+			}
 		}
 	}
 }
@@ -231,6 +257,106 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 820px;
+	margin-bottom: 80px;
+}
+.skills {
+	width: 100%;
+	padding: 80px;
+	background-color: $bg-content;
+	&:hover {
+		.skill-set-item {
+			.html {
+				animation-name: html;
+			}
+			.resp {
+				animation-name: responsive;
+			}
+			.boots {
+				animation-name: bootstrap;
+			}
+			.jquery {
+				animation-name: jquery;
+			}
+			.prepros {
+				animation-name: cssprepros;
+			}
+			.gulp {
+				animation-name: gulp;
+			}
+			.git {
+				animation-name: git;
+			}
+		}
+	}
+}
+.progress-menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.skill-set {
+	width: 30%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	li {
+		h4 {
+			margin: 20px 0;
+			font-size: 32px;
+			line-height: 37px;
+			color: $default-color;
+		}
+	}
+}
+.skill-set-item {
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	li {
+		margin: 32px 0;
+		width: 1%;
+		height: 14px;
+		border-radius: 7px;
+		background-color: $brand-color;
+		animation-duration: 1.5s;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+}
+@keyframes html {
+	to {
+		width: 90%;
+	}
+}
+@keyframes responsive {
+	to {
+		width: 80%;
+	}
+}
+@keyframes bootstrap {
+	to {
+		width: 30%;
+	}
+}
+@keyframes jquery {
+	to {
+		width: 50%;
+	}
+}
+@keyframes cssprepros {
+	to {
+		width: 80%;
+	}
+}
+@keyframes gulp {
+	to {
+		width: 20%;
+	}
+}
+@keyframes git {
+	to {
+		width: 70%;
+	}
 }
 .footer {
 	position: fixed;
