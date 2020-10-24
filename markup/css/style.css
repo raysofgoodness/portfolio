@@ -293,27 +293,6 @@ body {
   width: 100%;
   padding: 80px;
   background-color: #f5f5f5; }
-  .skills:hover .skill-set-item .html {
-    -webkit-animation-name: html;
-            animation-name: html; }
-  .skills:hover .skill-set-item .resp {
-    -webkit-animation-name: responsive;
-            animation-name: responsive; }
-  .skills:hover .skill-set-item .boots {
-    -webkit-animation-name: bootstrap;
-            animation-name: bootstrap; }
-  .skills:hover .skill-set-item .jquery {
-    -webkit-animation-name: jquery;
-            animation-name: jquery; }
-  .skills:hover .skill-set-item .prepros {
-    -webkit-animation-name: cssprepros;
-            animation-name: cssprepros; }
-  .skills:hover .skill-set-item .gulp {
-    -webkit-animation-name: gulp;
-            animation-name: gulp; }
-  .skills:hover .skill-set-item .git {
-    -webkit-animation-name: git;
-            animation-name: git; }
 
 .progress-menu {
   display: flex;
@@ -347,62 +326,20 @@ body {
             animation-timing-function: ease;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards; }
-
-@-webkit-keyframes html {
-  to {
-    width: 90%; } }
-
-@keyframes html {
-  to {
-    width: 90%; } }
-
-@-webkit-keyframes responsive {
-  to {
-    width: 80%; } }
-
-@keyframes responsive {
-  to {
-    width: 80%; } }
-
-@-webkit-keyframes bootstrap {
-  to {
-    width: 30%; } }
-
-@keyframes bootstrap {
-  to {
-    width: 30%; } }
-
-@-webkit-keyframes jquery {
-  to {
-    width: 50%; } }
-
-@keyframes jquery {
-  to {
-    width: 50%; } }
-
-@-webkit-keyframes cssprepros {
-  to {
-    width: 80%; } }
-
-@keyframes cssprepros {
-  to {
-    width: 80%; } }
-
-@-webkit-keyframes gulp {
-  to {
-    width: 20%; } }
-
-@keyframes gulp {
-  to {
-    width: 20%; } }
-
-@-webkit-keyframes git {
-  to {
-    width: 70%; } }
-
-@keyframes git {
-  to {
-    width: 70%; } }
+  .skill-set-item .html {
+    width: 90%; }
+  .skill-set-item .resp {
+    width: 80%; }
+  .skill-set-item .boots {
+    width: 30%; }
+  .skill-set-item .jquery {
+    width: 50%; }
+  .skill-set-item .prepros {
+    width: 80%; }
+  .skill-set-item .gulp {
+    width: 20%; }
+  .skill-set-item .git {
+    width: 70%; }
 
 .footer {
   position: fixed;

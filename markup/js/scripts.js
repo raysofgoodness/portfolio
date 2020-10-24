@@ -23,3 +23,5 @@ function animateScroll() {
 	}
 }
 window.addEventListener('scroll', animateScroll)
+
+AOS.init();

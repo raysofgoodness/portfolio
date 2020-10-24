@@ -263,31 +263,6 @@ body {
 	width: 100%;
 	padding: 80px;
 	background-color: $bg-content;
-	&:hover {
-		.skill-set-item {
-			.html {
-				animation-name: html;
-			}
-			.resp {
-				animation-name: responsive;
-			}
-			.boots {
-				animation-name: bootstrap;
-			}
-			.jquery {
-				animation-name: jquery;
-			}
-			.prepros {
-				animation-name: cssprepros;
-			}
-			.gulp {
-				animation-name: gulp;
-			}
-			.git {
-				animation-name: git;
-			}
-		}
-	}
 }
 .progress-menu {
 	display: flex;
@@ -322,39 +297,25 @@ body {
 		animation-timing-function: ease;
 		animation-fill-mode: forwards;
 	}
-}
-@keyframes html {
-	to {
+	.html {
 		width: 90%;
 	}
-}
-@keyframes responsive {
-	to {
+	.resp {
 		width: 80%;
 	}
-}
-@keyframes bootstrap {
-	to {
+	.boots {
 		width: 30%;
 	}
-}
-@keyframes jquery {
-	to {
+	.jquery {
 		width: 50%;
 	}
-}
-@keyframes cssprepros {
-	to {
+	.prepros {
 		width: 80%;
 	}
-}
-@keyframes gulp {
-	to {
+	.gulp {
 		width: 20%;
 	}
-}
-@keyframes git {
-	to {
+	.git {
 		width: 70%;
 	}
 }
