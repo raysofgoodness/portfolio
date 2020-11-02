@@ -8,11 +8,11 @@ module.exports = {
     helpers: './gulp/helpers/'
   },
   dest: {
-    root: './docs/markup/',
-    css: './docs/markup/css/',
-    img: './docs/markup/img/',
-    js: './docs/markup/js/',
-    fonts: './docs/markup/fonts/'
+    root: './docs/',
+    css: './docs/css/',
+    img: './docs/img/',
+    js: './docs/js/',
+    fonts: './docs/fonts/'
   },
   watch: {
     html: './source/views/{layouts,partials,helpers,data}/**/*',
