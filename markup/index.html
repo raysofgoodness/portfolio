@@ -5,16 +5,16 @@
 	<title>Portfolio Markup Developer</title>
 	<meta charset="utf-8">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<link rel="stylesheet" href="markup/css/style.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body id="body">
 	<div class="wrapper">
 		<div class="heading">
 			<h1><a href="https://raysofgoodness.github.io/portfolio/">Ilia Skoropad</a></h1>
-			<button onclick="darkToggle()" class="switch-btn"><span>EN</span> | UA</button>
+			<button onclick="languageToggle()" class="switch-btn"><span>EN</span> | UA</button>
 		</div>
-		<button class="btn_burger">
+		<button class="btn_burger" onclick="menuToggle()">
 			<span class="btn_burger-line btn-top"></span>
 			<span class="btn_burger-line btn-mid"></span>
 			<span class="btn_burger-line btn-bot"></span>
@@ -60,6 +60,13 @@
 					</svg>
 				</a></li>
 		</ul>
+		<div class="sidebar">
+			<ul class="sidebar-list">
+				<li class="sidebar-item"><a href="#">Skills</a></li>
+				<li class="sidebar-item"><a href="#">Projects</a></li>
+				<li class="sidebar-item"><a href="#">Experience</a></li>
+			</ul>
+		</div>
 		<header class="header">
 			<div class="hero">
 				<span class="hero-title">
@@ -125,7 +132,7 @@
 				<div data-aos="fade-up-right" data-aos-offset="400" data-aos-easing="ease" class="inner-text">
 					<p class="text-projects">
 						Component library with html and css code examples</p>
-					<a href="https://github.com/raysofgoodness/mylibrary">github<svg width="16" height="4"
+					<a href="https://github.com/raysofgoodness/library">github<svg width="16" height="4"
 							viewBox="0 0 16 4" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M11.5982 0.0153515C11.7054 -0.0106888 11.8214 -0.000270963 11.9107 0.0413918L15.3393 1.86431C15.3929 1.89556 15.4286 1.93722 15.4286 1.9841C15.4286 2.03098 15.3929 2.07785 15.3393 2.1091L11.9107 3.95805C11.8214 3.99972 11.7054 4.01013 11.5982 3.98409C11.5 3.95805 11.4286 3.90076 11.4286 3.83306V2.66639L0.285719 2.66639C0.125 2.66639 0 2.59347 0 2.49972L0 1.49972C0 1.40597 0.125 1.33306 0.285719 1.33306L11.4286 1.33306V0.166389C11.4286 0.098677 11.4911 0.0413918 11.5982 0.0153515Z"
@@ -136,7 +143,7 @@
 					<p class="title-lib">Adaptive Layout Example</p>
 					<p class="text-projects">
 						Html page with burger menu</p>
-					<a href="https://github.com/mashimara/HW_09_responsive">github<svg width="16" height="4"
+					<a href="https://mashimara.github.io/HW_09_responsive">github<svg width="16" height="4"
 							viewBox="0 0 16 4" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M11.5982 0.0153515C11.7054 -0.0106888 11.8214 -0.000270963 11.9107 0.0413918L15.3393 1.86431C15.3929 1.89556 15.4286 1.93722 15.4286 1.9841C15.4286 2.03098 15.3929 2.07785 15.3393 2.1091L11.9107 3.95805C11.8214 3.99972 11.7054 4.01013 11.5982 3.98409C11.5 3.95805 11.4286 3.90076 11.4286 3.83306V2.66639L0.285719 2.66639C0.125 2.66639 0 2.59347 0 2.49972L0 1.49972C0 1.40597 0.125 1.33306 0.285719 1.33306L11.4286 1.33306V0.166389C11.4286 0.098677 11.4911 0.0413918 11.5982 0.0153515Z"
@@ -173,14 +180,8 @@
 		</div>
 		<a class="number" href="tel:+380981298511">+38 098 129 85 11</a>
 	</footer>
-	<script>
-		function darkToggle() {
-			const element = document.getElementById("body");
-			element.classList.toggle("dark-theme");
-		}
-	</script>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<script src="markup/js/scripts-min.js"></script>
+	<script src="js/scripts-min.js"></script>
 </body>
 
 </html>

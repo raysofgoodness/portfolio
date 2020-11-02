@@ -25,3 +25,7 @@ function animateScroll() {
 window.addEventListener('scroll', animateScroll)
 
 AOS.init();
+function menuToggle() {
+	const element = document.getElementById("body");
+	element.classList.toggle("open-bar");
+}
