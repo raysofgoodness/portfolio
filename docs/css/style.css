@@ -585,7 +585,7 @@ body {
     display: block;
     width: 48px;
     height: 5px;
-    background-color: #f92672;
+    background-color: #75715E;
     position: relative;
     transform-origin: 100% 50%; }
   .open-bar .btn_burger .btn-top {
@@ -605,7 +605,9 @@ body {
   .open-bar .btn_burger:hover .btn-mid,
   .open-bar .btn_burger:hover .btn-bot {
     -webkit-animation: 0s;
-            animation: 0s; }
+            animation: 0s;
+    background-color: #f92672;
+    transition: 0.5s; }
 
 .open-bar .sidebar {
   transform: translateX(0); }

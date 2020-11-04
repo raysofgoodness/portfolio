@@ -571,9 +571,8 @@ body {
 			display: block;
 			width: 48px;
 			height: 5px;
-			background-color: $brand-color;
+			background-color: $fitches-color;
 			position: relative;
-			// transition: cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.45s;
 			transform-origin: 100% 50%;
 		}
 		.btn-top {
@@ -597,6 +596,8 @@ body {
 			.btn-mid,
 			.btn-bot {
 				animation: 0s;
+				background-color: $brand-color;
+				transition: 0.5s;
 			}
 		}
 	}
